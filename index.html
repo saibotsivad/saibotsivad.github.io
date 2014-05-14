@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Noddity
+	</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+
+<script id='main' type="text/ractive">
+
+	<div class="menu">
+		<a href="#/">
+			<img class="logo" src="{{logo}}" />
+		</a>
+
+		<div>
+			<h3>Posts</h3>
+			<ol>
+				{{#postList}}
+					<li><a href="#/{{pagePathPrefix}}{{filename}}">{{title}}</a></li>
+				{{/postList}}
+			</ol>
+		</div>
+	</div>
+
+	<div class="main">
+		<div id="edit-post-link"><a href="{{editLink}}{{current}}">Edit this post</a></div>
+		{{#currentPost}}
+			{{>post}}
+		{{/currentPost}}
+	</div>
+
+</script>
+
+<script src="js/vendor/satnav.js"></script>
+<script src="build.js"></script>
+
+</body>
+
+</html>
