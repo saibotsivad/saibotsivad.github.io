@@ -24,7 +24,7 @@ A closer view of the extruder head:
 
 ![Solidoodle printer, head close-up](/content/images/3d-printer/extruder-head.jpg)
 
-After setting it up and being frustrated with Windows, it turns out I really just need to do a better
+After setting it up and being frustrated with Windows, it turns out I really just needed to do a better
 job at reading Solidoodle's well written instructions.
 
 I downloaded the archer figurine from the [Pocket Tactics](http://www.thingiverse.com/thing:41740) game,

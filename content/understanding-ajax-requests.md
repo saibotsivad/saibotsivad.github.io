@@ -1,7 +1,7 @@
 title: Understanding AJAX requests
 date: 2012-03-21 16:53
-excerpt: 
-categories: wordpress
+
+---
 
 Have you ever written a post, started to type in a tag, and saw this sort of interface reaction:
 

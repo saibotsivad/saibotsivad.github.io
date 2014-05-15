@@ -1,7 +1,7 @@
 title: WordPress plugins
 date: 2012-06-14 04:14
-excerpt: 
-categories: wordpress
+
+---
 
 In the course of my work with WordPress, I've created quite a number of plugins to test and demonstrate particularly interesting things. In the past I tried to post them here on this blog, but it is rather time consuming to copy/paste into WordPress, make sure all the editing is correct, and upload the files. Right now I'm trying to wrap up several projects that I started during school, and start a few other projects that I feel will be very productive, so I don't really have time to do this anymore.
 

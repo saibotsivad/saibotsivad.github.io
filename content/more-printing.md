@@ -24,7 +24,7 @@ default settings. You can see that there are many little hairs
 and bumps on the ear that are a result of the printer being
 calibrated incorrectly.
 
-![Yoda head printed with Solidoodle 3D printer](/content/3d-printer/yoda-head.jpg)
+![Yoda head printed with Solidoodle 3D printer](/content/images/3d-printer/yoda-head.jpg)
 
 I certainly do not want to disparage the Solidoodle company or the
 developers of the Skeinforge application: The Solidoodle printer
@@ -40,14 +40,14 @@ figure out how to compile your model to "GCode", and then you must
 open the print program (another difficult interface) and figure
 out how to start it printing.
 
-With all that said, I would like also to point out the feeling
-of awe that I got when printing.
+With all that said, I would like also to let you know the feeling
+of awe that I got when printing!
 
 Watching an empty printer bed be filled with a thing like the [Yoda head][yodathing]
 was incredible to watch and, even despite the frustrations of
 dealing with early-stage software, it was well worth the time and cost.
 
-![Solidoodle printer after a week of work](/content/3d-printer/what-a-mess.jpg)
+![Solidoodle printer after a week of work](/content/images/3d-printer/what-a-mess.jpg)
 
 
 [skeinforge]: http://fabmetheus.crsndoo.com/wiki/index.php/Skeinforge

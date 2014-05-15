@@ -1,7 +1,7 @@
 title: The Hunt for Perfect Cider
 date: 2011-03-02 11:06
-excerpt: 
-categories: brewing
+
+---
 
 A while back myself and my roommate were given two gallons of very delicious apple cider from a family at my church. This stuff is top notch cider, in my opinion, but I had a problem: I can't really drink much of itâ€”a few ounces at a time is about my limit. It's not because I'm diabetic, I just can't handle the sweetness of it, it's too much for me.
 
@@ -69,22 +69,23 @@ Since the bottles are slightly pressurized to begin with (carbonation) and then 
 
 Another thing to know is that you'll be opening a bottle every so often, so you can detect the carbonation level and decide when to stop the fermentation. A greater familiarity with the process and timing of the process will help you here, but once you open the bottle you can still recap it, just make sure you open a different bottle each time, and be sanitary so you don't contaminate that opened bottle.
 
-#### Resting Time: Maturity
+## Resting Time: Maturity
 
 When I first read about making [mead](http://en.wikipedia.org/wiki/Mead), another of my favorite drinks, I found out that the flavor of the mead is affected greatly by how much time you let it mature after the fermentation process is complete. Cider is no different, from that general perspective at least. A good mead may be drinkable in a month, but if you give it a year it will be like the nectar of the gods. I hope cider doesn't take that long, but you'll certainly want to give it a month or so before you bother drinking it.
 
 I am bottling up this next batch in single serve bottles, the standard 11.5 oz size, so I'll be able to sample the cider without losing too many if it's not ready. Smaller bottles require more time and effort to prepare, but the smaller size is good for initial experimentation.
 
-#### Final Notes
+## Final Notes
 
 If you made it this far I am impressed. This is mostly meant as a beginning reference for myself, explaining the basic concept of apple cider fermentation.
 
 The basic idea of making cider is so simple anyone can do it: Buy a gallon of apple juice, add some yeast, let it sit for a few months, enjoy!
 
 Getting into cider making is something I've been wanting to do for a while, and I plan on approaching it in a scientific manner, so that I can reproduce excellent quality cider every time.
+
 > "And wine that maketh glad the heart of man, and oil to make his face to shine, and bread which strengtheneth man's heart." (Psalm 104:15)
 
-#### Other References:
+## Other References:
 
 *   A [short Bible study](http://www.biblestudy.org/basicart/does-bible-permit-drinking-wine-alcohol.html) on the drinking of alcohol, for those with conscience issues and those who lack moderation.
 *   [Charts showing](http://www.home-winemaking.com/winemaking-2b.html) sugar content relative to specific gravity.
