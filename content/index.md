@@ -1,3 +1,8 @@
+title: Everything is Broken!
+date: 2014-05-15 12:17
+
+---
+
 Hey there. I'm terribly sorry, while trying to switch over to using [noddity](http://noddity.com) I managed to mess up my DNS settings and switched the whole site over to the new version before it was done.
 
 There's not alot here. There's also not a lot here.
