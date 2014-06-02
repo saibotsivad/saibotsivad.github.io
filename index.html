@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>
-		Tobias Labs
-	</title>
-	<link href="http://rss.noddityaas.com/?noddityRoot=http://tobiaslabs.com/content/&postUrlRoot=http://tobiaslabs.com/&title=Tobias Labs&author=Tobias" rel="alternate" type="application/rss+xml" title="Tobias Labs: Software and engineering." />
+	<title>Tobias Labs</title>
+	<link href="http://rssaas.com/?noddityRoot=http://tobiaslabs.com/content/&postUrlRoot=http://tobiaslabs.com/%23!/post/&title=Tobias%20Labs&author=saibotsivad" rel="alternate" type="application/rss+xml" title="Tobias Labs" />
+	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="shortcut icon" href="/favicon.ico">
 </head>
 
 <body>
@@ -13,7 +13,7 @@
 <script id='main' type="text/ractive">
 
 	<div class="menu">
-		<a href="#/">
+		<a href="{{pathPrefix}}">
 			<img class="logo" src="{{logo}}" />
 		</a>
 
@@ -21,23 +21,26 @@
 			<h3>Posts</h3>
 			<ol>
 				{{#postList}}
-					<li><a href="#/{{pagePathPrefix}}{{filename}}">{{title}}</a></li>
+					<li><a href="{{pathPrefix}}{{pagePathPrefix}}{{filename}}">{{title}}</a></li>
 				{{/postList}}
 			</ol>
 		</div>
 	</div>
 
 	<div class="main">
-		<div id="edit-post-link"><a href="{{editLink}}{{current}}">Edit this post</a></div>
-		{{#currentPost}}
-			{{>post}}
-		{{/currentPost}}
+		{{#editLink}}<div id="edit-post-link"><a href="{{editLink}}{{current}}">Edit this post</a></div>{{/editLink}}
+		<article>
+			{{#currentPost}}
+				{{>post}}
+			{{/currentPost}}
+		</article>
 	</div>
 
 </script>
 
+<script src="config.js"></script>
 <script src="js/vendor/satnav.js"></script>
-<script src="build.js"></script>
+<script src="js/build.js"></script>
 
 </body>
 
