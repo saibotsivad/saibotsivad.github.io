@@ -1,0 +1,65 @@
+==================================================================
+https://keybase.io/saibotsivad
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://davistobias.com
+  * I am saibotsivad (https://keybase.io/saibotsivad) on keybase.
+  * I have a public key with fingerprint C63F 81A7 FAB4 113A E6C7  A984 07B3 FF22 56B0 BB8B
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "c63f81a7fab4113ae6c7a98407b3ff2256b0bb8b",
+            "host": "keybase.io",
+            "key_id": "07b3ff2256b0bb8b",
+            "uid": "b76daf4b52abdf52b0499a2f3094ed00",
+            "username": "saibotsivad"
+        },
+        "service": {
+            "hostname": "davistobias.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1408653553,
+    "expire_in": 157680000,
+    "prev": "1ae36ab1338f9b313496790e12057301d8186c33a7cad2f0b6a6c7180273bc5c",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v0.3.1
+Comment: https://keybase.io/crypto
+
+yMHuAnicbZFdSBRRFMdXWxVdpbSHnpKctVxls/nY+VpMKdSiLFBrFRG3e2fu7N7U
+nW1nXFtsg+gTffKhiIJ6yNIw8IMilT40jVpcg4wo6EXTgsSghJSKPmbE3rovl3vO
+7/z/59wzkbHOkpbgGD8Um1gs3ZQwObrSYqlerv3aRkBVjhDuNqIRrV4KDvhQKBjC
+AZ1wExLHKAIFeAVAF0UxAHESD0TBRfKQURSaZjlIQihAwkn4Vc2sMGQg0FAhVo2Y
+8fBi2Yj+h29ZTUCek4HigiwNoKywNCRdoghohSFFF5JJ0gQ1FAqAZmTQGsBQ1TUc
+BjIRdRJGIowlZLZtuq9BMghjTVchBlqhpDYbCsGQqquS2mQk/boedJu1eiRowq0I
+etdkvBAHZGN6oyCMQhpWA4SbMkhJx6Yu5SIFjmVYlnES6HgQh5AXmwTLcwJpHNMG
+hQ1JCiCGA5BiGEERIUMxLpHjRRJRNMnyDEnJAiVwEsMAXgIyrZCQA8avUgJJ8wyU
+WIkwBzsWUAm34aQDnzk39gWA3hJCRPTJaL3VkpBmSU5KNPdnSUvd8G+r1taUP9Ge
+nMfxqZr4r7qOvisvhpj2cZtIldv2TB/eedt69UJmVX1yH+Gbfvhazng7O2JfLO38
+2jGoFdnux4ixuU+9XIQvO31z4t28PeX67uGpAZ9j9sPGwvyL26fX9zd5cDQ5Gps8
+KNu5xkxxf7bzx6Vtz61lKZUrjzz7SpaDTWJPd0O3rSsuvDxiq0jtvLe1yGXP6eo/
+kD6Tl7XrhANtKbblfL7lf1Xxe4ZVaq91P91c1+DmCvLx2YXEkdZ4dWXMkZTu6ThT
+cONO9sfisbzywUjuudEd31dKJPpB1tzPGo918OTdy19ijje9R/2dpekjIHfv8ED7
+0tD80rOFqvOnvr3/C8v1Ed4=
+=9KEA
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/saibotsivad
+
+==================================================================
