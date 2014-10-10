@@ -1,14 +1,29 @@
-title: Everything is Broken!
+title: Tobias Labs (saibotsivad)
 date: 2014-05-15 12:17
 
 ---
 
-Hey there. I'm terribly sorry, while trying to switch over to using [noddity](http://noddity.com) I managed to mess up my DNS settings and switched the whole site over to the new version before it was done.
+Hey there.
 
-There's not alot here. There's also not a lot here.
+My online presence:
 
-Sorry.
+* [@saibotsivad](https://twitter.com/saibotsivad) on Twitter
+* A handful of packages [on npm](https://www.npmjs.org/~saibotsivad)
+* Some attempts at making [useful things](https://github.com/tobiaslabs)
+* Some [personal repos](https://github.com/saibotsivad)
+* I'm trying out [keybase](https://keybase.io/saibotsivad)
+* Here and there online in other places
 
-Come back later, maybe?
+Some projects that I put together:
 
-I'm working on fixing all the posts as fast as I can, I do apologize for all the broken things hanging about!
+* [hex2words](http://tobiaslabs.com/hex2words/) is a simple JS
+  tool utilizing the [PGP word list](https://en.wikipedia.org/wiki/PGP_word_list)
+* The [SDMP](https://github.com/tobiaslabs/SDMP) is my attempt
+  at making the internet a better, more secure place
+* Not being satisfied with the language of the [WTFPL](http://www.wtfpl.net/) or
+  the restrictions of the [MIT license](http://opensource.org/licenses/MIT), I made
+  my [own license](http://veryopenlicense.com/)
+
+On the left you can see some things I wrote.
+
+I hope they are useful or interesting.
