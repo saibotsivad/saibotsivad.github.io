@@ -46,7 +46,7 @@ site.
 
 On the server we'll put a PHP file that looks like this:
 
-```php
+````php
 <?php
 $LOCAL_ROOT         = "/path/to";
 $LOCAL_REPO_NAME    = "mysite.com";
@@ -64,7 +64,7 @@ if ( $_SERVER['HTTP_X_GITHUB_DELIVERY'] ) {
     die("done " . mktime());
   }
 }
-```
+````
 
 The code says that, if the HTTP request contains the header field
 `HTTP_X_GITHUB_DELIVERY`, to `git pull` the latest version down.
