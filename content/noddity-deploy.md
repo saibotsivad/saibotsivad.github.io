@@ -46,7 +46,7 @@ site.
 
 On the server we'll put a PHP file that looks like this:
 
-````
+```php
 <?php
 $LOCAL_ROOT         = "/path/to";
 $LOCAL_REPO_NAME    = "mysite.com";
@@ -64,7 +64,7 @@ if ( $_SERVER['HTTP_X_GITHUB_DELIVERY'] ) {
     die("done " . mktime());
   }
 }
-````
+```
 
 The code says that, if the HTTP request contains the header field
 `HTTP_X_GITHUB_DELIVERY`, to `git pull` the latest version down.
@@ -91,9 +91,9 @@ update you made is on the server.
 
 Make sure that you uncomment the line inside `index.html` that looks like this:
 
-````
+```html
 <meta name="fragment" content="!">
-````
+```
 
 Finally, to test that the `.htaccess` rule is working, try this as the URL:
 
