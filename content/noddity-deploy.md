@@ -46,7 +46,7 @@ site.
 
 On the server we'll put a PHP file that looks like this:
 
-````php
+````
 <?php
 $LOCAL_ROOT         = "/path/to";
 $LOCAL_REPO_NAME    = "mysite.com";
@@ -91,7 +91,7 @@ update you made is on the server.
 
 Make sure that you uncomment the line inside `index.html` that looks like this:
 
-````html
+````
 <meta name="fragment" content="!">
 ````
 
