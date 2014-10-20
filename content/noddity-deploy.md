@@ -24,7 +24,7 @@ that will render your Noddity install to HTML. To set this up
 requires a bit more configuration than simply using [GitHub Pages][gp],
 so I'm going to tell you:
 
-### How I setup Noddity on Dreamhost
+## How I setup Noddity on Dreamhost
 
 I use [Dreamhost](http://dreamhost.com) for hosting my random few
 sites. Dreamhost is a shared LAMP stack, and lets you put `.htaccess`
