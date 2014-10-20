@@ -3,38 +3,46 @@
 <head>
 	<title>Tobias Labs</title>
 	<link href="http://rssaas.com/?noddityRoot=http://tobiaslabs.com/content/&postUrlRoot=http://tobiaslabs.com/%23!/post/&title=Tobias%20Labs&author=saibotsivad" rel="alternate" type="application/rss+xml" title="Tobias Labs" />
+	<meta name="fragment" content="!">
+
 	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="fonts.css" />
 	<link rel="stylesheet" type="text/css" href="style.css" />
-	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="shortcut icon" href="icon/favicon.ico">
 </head>
 
 <body>
+<div id="sidebar"></div>
+<div id="main"></div>
 
-<script id='main' type="text/ractive">
+<script id='template-menu' type="text/ractive">
+	<a href="{{pathPrefix}}">
+		<img class="logo" src="{{logo}}" />
+	</a>
 
-	<div class="menu">
-		<a href="{{pathPrefix}}">
-			<img class="logo" src="{{logo}}" />
-		</a>
+	<div>
+		<h3>Posts</h3>
+		<ol>
+			{{#postList}}
+				<li><a href="{{pathPrefix}}{{pagePathPrefix}}{{filename}}">{{title}}</a></li>
+			{{/postList}}
+		</ol>
+	</div>
+</script>
+<script id="template-main" type="text/ractive">
 
+	{{#editLink}}<div id="edit-post-link"><a href="{{editLink}}{{current}}">Edit this post</a></div>{{/editLink}}
+	<article>
 		<div>
-			<h3>Posts</h3>
-			<ol>
-				{{#postList}}
-					<li><a href="{{pathPrefix}}{{pagePathPrefix}}{{filename}}">{{title}}</a></li>
-				{{/postList}}
-			</ol>
+			{{#metadata.title}}
+				<h1>{{metadata.title}}</h1>
+			{{/metadata.title}}
+			<div class="post-content">
+				{{{html}}}
+			</div>
 		</div>
-	</div>
-
-	<div class="main">
-		{{#editLink}}<div id="edit-post-link"><a href="{{editLink}}{{current}}">Edit this post</a></div>{{/editLink}}
-		<article>
-			{{#currentPost}}
-				{{>post}}
-			{{/currentPost}}
-		</article>
-	</div>
+	</article>
 
 </script>
 
