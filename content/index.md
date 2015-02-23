@@ -7,6 +7,7 @@ Hi there!
 
 * This is the official open library of projects started by
   [Tobias Davis (saibotsivad)](http://davistobias.com).
+* On the left are "blog" posts.
 * You can track progress of projects on the [Trello board](https://trello.com/b/xTCO0Lax/tobias-labs).
 * You can get involved by making pull requests to any of the repos.
 * I follow [rvagg](https://twitter.com/rvagg)'s [OPEN Open Source](https://github.com/rvagg/node-levelup/blob/master/CONTRIBUTING.md)
@@ -24,4 +25,4 @@ is a shortened list of all the projects hosted here:
 * The [Very Open License](http://veryopenlicense.com/) is for people and businesses who are
   uncomfortable with The Swears in the [WTFPL](http://www.wtfpl.net/), but want something
   even simpler and *less* restrictive than the [MIT license](http://opensource.org/licenses/MIT).
-* The [SDMP](https://github.com/tobiaslabs/SDMP) is my attempt at making the internet a better, more secure place
+* The [SDMP](https://github.com/tobiaslabs/SDMP) is my attempt at making the internet a better, more secure place.
