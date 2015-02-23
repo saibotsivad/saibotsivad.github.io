@@ -1,29 +1,27 @@
 title: Tobias Labs (saibotsivad)
-date: 2014-05-15 12:17
+date: 2015-02-22 23:02
 
 ---
 
-Hey there.
+Hi there!
 
-My online presence:
+* This is the official open library of projects started by
+  [Tobias Davis (saibotsivad)](http://davistobias.com).
+* You can track progress of projects on the [Trello board](https://trello.com/b/xTCO0Lax/tobias-labs).
+* You can get involved by making pull requests to any of the repos.
+* I follow [rvagg](https://twitter.com/rvagg)'s [OPEN Open Source](https://github.com/rvagg/node-levelup/blob/master/CONTRIBUTING.md)
+  model.
+* All the code and documentation made public on this site is released under the
+  [Very Open License](http://veryopenlicense.com).
 
-* [@saibotsivad](https://twitter.com/saibotsivad) on Twitter
-* A handful of packages [on npm](https://www.npmjs.org/~saibotsivad)
-* Some attempts at making [useful things](https://github.com/tobiaslabs)
-* Some [personal repos](https://github.com/saibotsivad)
-* I'm trying out [keybase](https://keybase.io/saibotsivad)
-* Here and there online in other places
+Although you can check out the [complete repository list](https://github.com/tobiaslabs), here
+is a shortened list of all the projects hosted here:
 
-Some projects that I put together:
-
-* [hex2words](http://tobiaslabs.com/hex2words/) is a simple JS
-  tool utilizing the [PGP word list](https://en.wikipedia.org/wiki/PGP_word_list)
-* The [SDMP](https://github.com/tobiaslabs/SDMP) is my attempt
-  at making the internet a better, more secure place
-* Not being satisfied with the language of the [WTFPL](http://www.wtfpl.net/) or
-  the restrictions of the [MIT license](http://opensource.org/licenses/MIT), I made
-  my [own license](http://veryopenlicense.com/)
-
-On the left you can see some things I wrote.
-
-I hope they are useful or interesting.
+* [npmupdater](http://npmupdater.com/) (or the [command line](https://www.npmjs.com/package/npmupdater-cli)
+  version) is a way to make it easier to update [npm](http://www.npmjs.com) packages.
+* [hex2words](http://tobiaslabs.com/hex2words/) is a simple JS tool utilizing
+  the [PGP word list](https://en.wikipedia.org/wiki/PGP_word_list) to verify hashes
+* The [Very Open License](http://veryopenlicense.com/) is for people and businesses who are
+  uncomfortable with The Swears in the [WTFPL](http://www.wtfpl.net/), but want something
+  even simpler and *less* restrictive than the [MIT license](http://opensource.org/licenses/MIT).
+* The [SDMP](https://github.com/tobiaslabs/SDMP) is my attempt at making the internet a better, more secure place
