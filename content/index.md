@@ -7,8 +7,6 @@ Hi there!
 
 * This is the official open library of projects started by
 	[Tobias Davis (saibotsivad)](http://davistobias.com).
-* You can track progress of Tobias Labs projects on the
-	[Trello board](https://trello.com/b/xTCO0Lax/tobias-labs).
 * You can get involved by making pull requests to any of the repositories.
 * I (try to) follow [rvagg](https://twitter.com/rvagg)'s
 	[OPEN Open Source](https://github.com/rvagg/node-levelup/blob/master/CONTRIBUTING.md)
