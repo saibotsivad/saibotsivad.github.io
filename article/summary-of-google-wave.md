@@ -1,6 +1,8 @@
+---
 title: A Summary of Google Wave
 date: 2009-06-04 03:03
-
+layout: article
+published: true
 ---
 
 > A while back I posted a review of the **abandoned** project [Google Wave](http://wave.google.com/), and later

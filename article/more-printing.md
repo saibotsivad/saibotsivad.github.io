@@ -1,6 +1,8 @@
+---
 title: More printing and calibration
 date: 2013-01-23 09:56
-
+layout: article
+published: true
 ---
 
 One thing I am certain of is that the Solidoodle is a home-brew 3D
@@ -24,7 +26,7 @@ default settings. You can see that there are many little hairs
 and bumps on the ear that are a result of the printer being
 calibrated incorrectly.
 
-![Yoda head printed with Solidoodle 3D printer](/content/images/3d-printer/yoda-head.jpg)
+![Yoda head printed with Solidoodle 3D printer](/article/images/3d-printer/yoda-head.jpg)
 
 I certainly do not want to disparage the Solidoodle company or the
 developers of the Skeinforge application: The Solidoodle printer
@@ -47,7 +49,7 @@ Watching an empty printer bed be filled with a thing like the [Yoda head][yodath
 was incredible to watch and, even despite the frustrations of
 dealing with early-stage software, it was well worth the time and cost.
 
-![Solidoodle printer after a week of work](/content/images/3d-printer/what-a-mess.jpg)
+![Solidoodle printer after a week of work](/article/images/3d-printer/what-a-mess.jpg)
 
 
 [skeinforge]: http://fabmetheus.crsndoo.com/wiki/index.php/Skeinforge

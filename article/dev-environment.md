@@ -1,6 +1,8 @@
+---
 title: Dev Environment
 date: 2012-09-06 03:30
-
+layout: article
+published: true
 ---
 
 The most frustrating times spent programming have been almost entirely when I have been

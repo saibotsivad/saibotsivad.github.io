@@ -1,0 +1,12 @@
+markdown: kramdown
+kramdown:
+  smart_quotes: [ "apos", "apos", "quot", "quot" ]
+  input: GFM
+  syntax_highlighter: rouge
+  hard_wrap: false
+exclude: [ "Gemfile", "Gemfile.lock", "readme.md" ]
+include: [ ".well-known" ]
+name: "Tobias Labs"
+description: "Experiments in open software."
+url: "http://localhost:4000"
+permalink: pretty

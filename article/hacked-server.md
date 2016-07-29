@@ -1,6 +1,8 @@
+---
 title: Hacked Server
 date: 2012-08-23 08:23
-
+layout: article
+published: true
 ---
 
 Over the weekend I was informed by a friend that a site I maintain (not mine
@@ -141,7 +143,7 @@ at the code, I realized that to run it, all you'd have to do is access it. It's 
 in the WordPress uploads folder, so we can simply navigate to it at
 `site.com/wp-content/uploads/the_file.php` and we get this:
 
-![Password login of control panel](/content/images/hacked-server/password.png)
+![Password login of control panel](/article/images/hacked-server/password.png)
 
 Hmmmm. The alcohol is setting in a bit now, and I am starting to feel less like the world
 will end, so I am curious what is behind the password?
@@ -153,7 +155,7 @@ on this computer, so an md5 lookup is not trivial for me. Instead, I boot up the
 [virtual computer](http://www.unixmen.com/install-lamp-with-1-command-in-ubuntu-1010-maverick-meerkat/)
 and run the code directly on a PHP server. Here is the screenshot:
 
-![Control panel](/content/images/hacked-server/control-panel.png)
+![Control panel](/article/images/hacked-server/control-panel.png)
 
 This is terrible.
 

@@ -1,6 +1,8 @@
+---
 title: WordPress Tutorial: Creating a new pop-up
 date: 2011-04-14 08:06
-
+layout: article
+published: true
 ---
 
 Have you ever wondered how to make your own pop-up I-Frame in WordPress, like the one used in blogs? Something that looks like this, but with custom interior HTML?
