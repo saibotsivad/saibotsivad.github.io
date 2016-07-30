@@ -7,10 +7,12 @@ published: true
 ---
 
 Recently I had the privilege of attending [Uber Conf](https://uberconf.com)
-in Denver, and while there I attended a session by
-[Kirk Knoernschild (kirkk)](https://twitter.com/pragkirk)
-detailing the new module loading system. (Thanks for
-the great intro, Kirk!)
+in Denver, and while there I attended sessions by
+[Kirk Knoernschild (@kirkk)](https://twitter.com/pragkirk)
+and
+[Venkat Subramaniam (@venkat_s)](https://twitter.com/venkat_s)
+detailing the new module loading system. (Thank you both for
+the great intro!)
 
 I'm going to journal here my attempts to poke at it and make it do my
 bidding. If you aren't already familiar with the new Java 9 module
