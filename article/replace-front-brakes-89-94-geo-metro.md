@@ -1,6 +1,6 @@
+---
 title: Replacing the Front Brakes on a 89-94 Geo Metro
 date: 2010-04-14 10:38
-
 ---
 
 In this post I show how to replace the front disc brakes and caliper pads

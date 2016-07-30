@@ -1,0 +1,17 @@
+{% include header.html %}
+
+<header class="index">
+	<img src="/logo.jpg" alt="Logo of Tobias!">
+	<h1>{{ site.name }}</h1>
+	<h2>{{ site.description }}</h2>
+	<hr>
+</header>
+
+<section>
+	<article>
+		{{content}}
+		<hr>
+	</article>
+</section>
+
+{% include footer.html %}
