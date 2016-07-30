@@ -8,5 +8,5 @@ exclude: [ "Gemfile", "Gemfile.lock", "readme.md" ]
 include: [ ".well-known" ]
 name: "Tobias Labs"
 description: "Experiments in open software."
-url: "http://localhost:4000"
+url: "http://tobiaslabs.com"
 permalink: pretty
