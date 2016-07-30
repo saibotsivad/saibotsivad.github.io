@@ -1,10 +1,12 @@
 {% include header.html %}
 
 <header class="article">
-	<p class="text-muted">
-		&#10094;
-		<a href="/" class="link-muted">{{ site.name }}</a>
-	</p>
+	<div class="site-logo">
+		<p class="text-muted">
+			<img src="/logo.jpg" alt="Site logo image">
+			<a href="/" class="link-muted">&#10094; {{ site.name }}</a>
+		</p>
+	</div>
 
 	{% if page.show_title != false %}
 		<h1>{{ page.title }}</h1>
@@ -30,7 +32,10 @@
 </header>
 
 <section>
-	<article>{{ content }}</article>
+	<article>
+		{{ content }}
+		<hr>
+	</article>
 </section>
 
 {% include footer.html %}

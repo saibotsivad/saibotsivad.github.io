@@ -14,11 +14,11 @@ Google gave me a few invitations to give away, which I gave to people I would li
 
 I first noticed the issue when I got an empty blip (message) in my wave-box. After some poking around, I realized it was from an ping (instant message) that a friend had started.
 
-![](/article/images/google-wave/wave-selected.jpg)
+[![](/article/images/google-wave/wave-selected.jpg)](/article/images/google-wave/wave-selected.jpg)
 
 As you can see, there is no message there, so my first instinct was to delete it. However, clicking on the trash button in the inbox bar did not remove it from my inbox, but instead just cleared the wave from the right column, like so:
 
-![](/article/images/google-wave/wave-selected2.jpg)
+[![](/article/images/google-wave/wave-selected2.jpg)](/article/images/google-wave/wave-selected2.jpg)
 
 After a search on the inter-webs, I found some [good comments][comments] about why the delete option may not be a good idea.
 

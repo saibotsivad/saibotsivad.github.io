@@ -5,17 +5,18 @@ layout: index
 Hi there! I'm Tobias Davis:
 
 * [saibotsivad](https://github.com/saibotsivad) on Github
+* Also [tobiaslabs](https://github.com/tobiaslabs) on Github
+* [saibotsivad](https://keybase.io/saibotsivad) on Keybase
 * [@saibotsivad](https://twitter.com/saibotsivad) on Twitter
+* [davistobias.com](http://davistobias.com) for personal writings
 * Also [on LinkedIn](https://www.linkedin.com/in/saibotsivad) I guess?
 
-This is a list of projects I started, some of them a bit experimental
-in nature, as well as articles I've written about tech stuff. You can
-follow the [RSS/Atom feed](/feed.xml) for updates.
+I'm a software engineer, familiar with the LAMP, Java+Jetty, Node.js,
+and AWS stacks, and in my spare time I make software published under the
+[Very Open License](http://veryopenlicense.com). I also write about
+some technical/user-experience issues when I have time.
 
-* All the code and documentation made public on this site is
-	released under the [Very Open License](http://veryopenlicense.com).
-* Check out the [complete repository list](https://github.com/tobiaslabs).
-* You can open issues or make pull requests to any of the repositories.
+You can follow the [RSS/Atom feed](/feed.xml) for updates.
 
 # Experiments
 
@@ -30,9 +31,14 @@ follow the [RSS/Atom feed](/feed.xml) for updates.
 * The [SDMP](https://sdmp.github.io/) is my attempt at making the internet a better,
 	more secure place.
 	(See [Github](https://github.com/sdmp/sdmp.github.io))
-* You can take a JSON schema and turn it to Markdown, for auto-generation
-	of human-readable documents.
+* You can take a [JSON schema](http://json-schema.org/) and turn it to
+	Markdown, for auto-generation of human-readable specs.
 	(See [Github](https://github.com/tobiaslabs/json-schema-to-markdown))
+
+# Contributing
+
+I welcome all pull requests against any of my public repositories, and
+if you don't want to do that, you can 
 
 # Articles
 

@@ -45,6 +45,19 @@ header.article {
 		font-style: italic;
 		margin: 0;
 	}
+	.site-logo {
+		p {
+			position: relative;
+		}
+		a {
+			position: absolute;
+			top: 0.5em;
+			left: 3em;
+		}
+		img {
+			height: 2em;
+		}
+	}
 }
 section {
 	hr {
@@ -55,11 +68,11 @@ section {
 		margin-top: 1.5em;
 		margin-bottom: 1.5em;
 	}
+	img {
+		max-width: 100%;
+	}
 }
 footer {
-	border-top: 0.07em solid #E4E3E3;
-	margin-top: 4em;
-	padding-top: 1em;
 	padding-bottom: 2em;
 	text-align: center;
 }

