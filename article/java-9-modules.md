@@ -45,7 +45,7 @@ modules depend on another third-party module, `D`, but at different versions.
 
 I've created a very minimal example to try different
 approaches, and I've made the source code
-[available here](https://github.com/tobiaslabs/java-9-module-demo)
+[available here](https://github.com/saibotsivad/java-9-module-demo)
 if you want to poke at it later, but I'll summarize the
 code setup here:
 
@@ -112,14 +112,14 @@ The `module-info.java` file for each module is different in each
 example, so the example will describe those files.
 
 > Note: I've included a slightly different, smaller module example
-> [here](https://github.com/tobiaslabs/java-9-module-demo/tree/master/working-example).
+> [here](https://github.com/saibotsivad/java-9-module-demo/tree/master/working-example).
 > If you're going to try compiling/running these examples, you
 > should first try running the `working-example` to make sure
 > your version of Java is compatible.
 >
 > For these examples, I was using Java version `9-ea+128`. If you
 > have problems getting it to run, please
-> [file an issue](https://github.com/tobiaslabs/java-9-module-demo/issues)
+> [file an issue](https://github.com/saibotsivad/java-9-module-demo/issues)
 > on that repo.
 
 ## The Problem/Motivation
@@ -163,7 +163,7 @@ module d {
 ```
 
 (See the full example
-[here](https://github.com/tobiaslabs/java-9-module-demo/tree/master/name-collision).)
+[here](https://github.com/saibotsivad/java-9-module-demo/tree/master/name-collision).)
 
 ## Version in Module Name?
 
@@ -234,10 +234,10 @@ java.lang.reflect.LayerInstantiationException: Package com.tobiaslabs.serviced i
 	at java.lang.System.initPhase2(java.base@9-ea/System.java:1928)
 ```
 
-(See this code [here](https://github.com/tobiaslabs/java-9-module-demo/tree/master/version-in-module-name).)
+(See this code [here](https://github.com/saibotsivad/java-9-module-demo/tree/master/version-in-module-name).)
 
 ## Other Possibilities?
 
 I'm sure you will run into this problem pretty fast, so if you
 have a solution, please propose it by opening an issue over at
-the [demo repo](https://github.com/tobiaslabs/java-9-module-demo/issues).
+the [demo repo](https://github.com/saibotsivad/java-9-module-demo/issues).
