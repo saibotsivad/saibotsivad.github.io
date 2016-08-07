@@ -8,7 +8,6 @@ Hi there! I'm Tobias Davis:
 * Also [tobiaslabs](https://github.com/tobiaslabs) on Github
 * [saibotsivad](https://keybase.io/saibotsivad) on Keybase
 * [@saibotsivad](https://twitter.com/saibotsivad) on Twitter
-* [davistobias.com](http://davistobias.com) for personal writings
 * Also [on LinkedIn](https://www.linkedin.com/in/saibotsivad) I guess?
 
 I'm a software engineer, familiar with the LAMP, Java+Jetty, Node.js,
