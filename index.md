@@ -2,20 +2,19 @@
 layout: index
 ---
 
-Hi there! I'm Tobias Davis:
+Hi there! I'm Tobias Davis, also `saibotsivad`
 
-* [saibotsivad](https://github.com/saibotsivad) on Github
-* Also [tobiaslabs](https://github.com/tobiaslabs) on Github
-* [saibotsivad](https://keybase.io/saibotsivad) on Keybase
-* [@saibotsivad](https://twitter.com/saibotsivad) on Twitter
-* Also [on LinkedIn](https://www.linkedin.com/in/saibotsivad) I guess?
+* [on Github](https://github.com/saibotsivad)
+* [on Keybase](https://keybase.io/saibotsivad)
+* [on Twitter](https://twitter.com/saibotsivad)
+* [on LinkedIn](https://www.linkedin.com/in/saibotsivad)
 
 I'm a software engineer, familiar with the LAMP, Java+Jetty, Node.js,
 and AWS stacks, and in my spare time I make software published under the
 [Very Open License](http://veryopenlicense.com). I also write about
 some technical/user-experience issues when I have time.
 
-You can follow the [RSS/Atom feed](/feed.xml) for updates.
+You can follow the [RSS/Atom feed](/feed.xml) for updates to this site.
 
 # Experiments
 
