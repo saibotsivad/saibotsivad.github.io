@@ -1,8 +1,7 @@
-# [Tobias Labs](http://tobiaslabs.com)
+# [saibotsivad](http://saibotsivad.com)
 
-This is the content of the entirity of the Tobias Labs website.
-
-It uses Github Pages, aka [JekyllRB](http://jekyllrb.com/).
+This is the website for [saibotsivad.com](http://saibotsivad.com),
+it uses Github Pages, aka [JekyllRB](http://jekyllrb.com/).
 
 For development, build and launch using the command (need ruby
 installed, presumably):
@@ -10,7 +9,7 @@ installed, presumably):
 	bundle exec jekyll serve
 
 Since it's run with Github Pages, it means that any repo
-inside the [tobiaslabs org](https://github.com/tobiaslabs)
+inside the [saibotsivad repo](https://github.com/saibotsivad)
 that has a `gh-pages` branch will be accessible at
 
-	tobiaslabs.com/$REPO_NAME
+	saibotsivad.com/$REPO_NAME
