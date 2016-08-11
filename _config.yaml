@@ -6,7 +6,7 @@ kramdown:
   hard_wrap: false
 exclude: [ "Gemfile", "Gemfile.lock", "readme.md" ]
 include: [ ".well-known" ]
-name: "Tobias Labs"
+name: "saibotsivad"
 description: "Experiments in open software."
-url: "http://tobiaslabs.com"
+url: "http://saibotsivad.com"
 permalink: pretty
