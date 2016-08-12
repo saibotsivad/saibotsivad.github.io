@@ -23,7 +23,6 @@ identities:
 <header class="index">
 	<img src="/logo.jpg" alt="Logo of Tobias!">
 	<h1>saibotsivad:</h1>
-	<p>I write software and design user interfaces, and I care a lot about getting both of those things right.</p>
 	<ul class="online-presence-icons">
 		{% for identity in page.identities %}
 		<li class="{{ identity.name }}">
@@ -33,20 +32,24 @@ identities:
 		</li>
 		{% endfor %}
 	</ul>
+	<p>I write software and design user interfaces, and I want to be excellent at both of those things!</p>
 	<hr>
 </header>
 
 # About Me
 
-* Much of what I write is in JavaScript (ES6 is awesome!), but I
-	also write in Java (lambdas are awesome too!).
-* In my current job I write a lot of AngularJS code, and have
-	become intimately acquainted with Bootstrap. I appreciate
-	them both, but could also complain at length about them.
-* Familiar with popular stacks: LAMP, Node.js, Java+Jetty, AWS.
+I care about solving problems using software. I want the
+code that I write to be readable and maintainable years
+down the road. I like to spend the extra time doing it
+right, but I can understand the necessity of getting it
+done quickly.
 
 In my spare time I like to write software, and I also occasionally
 write about some technical/user-experience issues.
+
+Currently I'm working for [eDataSource](http://www.edatasource.com/),
+but you can have a look at my professional experience
+[on LinkedIn](https://linkedin.com/in/saibotsivad).
 
 # For Computers
 
