@@ -7,6 +7,6 @@ kramdown:
 exclude: [ "Gemfile", "Gemfile.lock", "readme.md" ]
 include: [ ".well-known" ]
 name: "saibotsivad"
-description: "Experiments in open software."
+description: "Excellence in software."
 url: "http://saibotsivad.com"
 permalink: pretty
