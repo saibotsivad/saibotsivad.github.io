@@ -14,6 +14,9 @@ identities:
   - image: /media/npmjs.svg
     url: https://www.npmjs.com/~saibotsivad
     name: npmjs
+  - image: /media/stackoverflow.png
+    url: https://stackoverflow.com/users/1208104/saibotsivad
+    name: stackoverflow
   - image: /media/linkedin.svg
     url: https://linkedin.com/in/saibotsivad
     name: linkedin
