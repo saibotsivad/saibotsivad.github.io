@@ -14,20 +14,20 @@ body {
 	font-weight: 200;
 	line-height: 1.3em;
 }
-header {
-	hr {
-		border: 0.2em solid #D7D7D7;
-		margin-bottom: 3em;
-	}
-}
 header.index {
 	text-align: center;
+	hr {
+		border: 0.2em solid #D7D7D7;
+		margin: 0;
+		margin-bottom: 2em;
+	}
 	img {
 		height: 188px;
 	}
 	h1 {
 		font-size: 2.5em;
 		margin-top: 1em;
+		margin-bottom: 0.5em;
 		line-height: 1em;
 	}
 	h2 {
@@ -36,8 +36,40 @@ header.index {
 		margin-bottom: 1.5em;
 		line-height: 1.2em;
 	}
+	p {
+		margin-top: 0;
+	}
+	.online-presence-icons {
+		text-align: center;
+		padding-left: 0;
+		ul,
+		li {
+			display: inline-block;
+		}
+		li {
+			padding-left: 1em;
+			padding-right: 0.3em;
+		}
+		img {
+			height: 3em;
+		}
+		.npmjs img {
+			height: 2.2em;
+			position: relative;
+			top: -0.3em;
+		}
+		.linkedin img {
+			height: 2.3em;
+			position: relative;
+			top: -0.3em;
+		}
+	}
 }
 header.article {
+	hr {
+		border: 0.2em solid #D7D7D7;
+		margin-bottom: 2em;
+	}
 	h1 {
 		line-height: 1.1em;
 	}

@@ -6,10 +6,12 @@
 					Follow this site using
 					<a href="/feed.xml" class="link-muted">Atom/RSS</a>
 				</p>
-				<p class="text-muted">
-					Return to
-					<a href="{{site.url}}" class="link-muted">{{site.name}}</a>
-				</p>
+				{% if page.isroot != true %}
+					<p class="text-muted">
+						Return to
+						<a href="{{site.url}}" class="link-muted">{{site.name}}</a>
+					</p>
+				{% endif %}
 			</footer>
 		</body>
 </html>

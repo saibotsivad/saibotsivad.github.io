@@ -1,22 +1,54 @@
 ---
 layout: index
+isroot: true
+identities:
+  - image: /media/github.png
+    url: https://github.com/saibotsivad
+    name: github
+  - image: /media/keybase.png
+    url: https://keybase.io/saibotsivad
+    name: keybase
+  - image: /media/twitter.svg
+    url: https://twitter.com/saibotsivad
+    name: twitter
+  - image: /media/npmjs.svg
+    url: https://www.npmjs.com/~saibotsivad
+    name: npmjs
+  - image: /media/linkedin.svg
+    url: https://linkedin.com/in/saibotsivad
+    name: linkedin
 ---
 
-Hi there! I'm Tobias Davis, also `saibotsivad`
 
-* [on Github](https://github.com/saibotsivad)
-* [on Keybase](https://keybase.io/saibotsivad)
-* [on Twitter](https://twitter.com/saibotsivad)
-* [on LinkedIn](https://www.linkedin.com/in/saibotsivad)
+<header class="index">
+	<img src="/logo.jpg" alt="Logo of Tobias!">
+	<h1>saibotsivad:</h1>
+	<p>I write software and design user interfaces, and I care a lot about getting both of those things right.</p>
+	<ul class="online-presence-icons">
+		{% for identity in page.identities %}
+		<li class="{{ identity.name }}">
+			<a href="{{ identity.url }}">
+				<img src="{{ identity.image }}" alt="">
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+	<hr>
+</header>
 
-I'm a software engineer, familiar with the LAMP, Java+Jetty, Node.js,
-and AWS stacks, and in my spare time I make software published under the
-[Very Open License](http://veryopenlicense.com). I also write about
-some technical/user-experience issues when I have time.
+# About Me
 
-You can follow the [RSS/Atom feed](/feed.xml) for updates to this site.
+* Much of what I write is in JavaScript (ES6 is awesome!), but I
+	also write in Java (lambdas are awesome too!).
+* In my current job I write a lot of AngularJS code, and have
+	become intimately acquainted with Bootstrap. I appreciate
+	them both, but could also complain at length about them.
+* Familiar with popular stacks: LAMP, Node.js, Java+Jetty, AWS.
 
-# Experiments
+In my spare time I like to write software, and I also occasionally
+write about some technical/user-experience issues.
+
+# For Computers
 
 * [hex2words](https://tobiaslabs.github.io/hex2words/) is a simple JS tool utilizing the
 	[PGP word list](https://en.wikipedia.org/wiki/PGP_word_list) to verify hashes.
@@ -33,12 +65,7 @@ You can follow the [RSS/Atom feed](/feed.xml) for updates to this site.
 	Markdown, for auto-generation of human-readable specs.
 	(See [Github](https://github.com/tobiaslabs/json-schema-to-markdown))
 
-# Contributing
-
-I welcome all pull requests against any of my public repositories, and
-if you don't want to do that, you can 
-
-# Articles
+# For Humans
 
 <ul>
 {% assign sorted_pages = (site.pages | sort: 'date' | reverse ) %}
@@ -60,3 +87,5 @@ if you don't want to do that, you can
 	{% endif %}
 {% endfor %}
 </ul>
+
+You can use <a href="/feed.xml" class="link-muted">Atom/RSS</a>.
