@@ -36,6 +36,7 @@ identities:
 		{% endfor %}
 	</ul>
 	<p>I write software and design user interfaces, and I want to be excellent at both of those things!</p>
+	<p>You can have a look at <a href="/resume">my resume</a>, if that's your thing.</p>
 	<hr>
 </header>
 
