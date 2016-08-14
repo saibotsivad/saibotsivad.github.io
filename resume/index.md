@@ -4,7 +4,7 @@ date: 2016-07-23 08:53
 layout: article
 ---
 
-> Also available in [bullet-points form](./bullet-points).
+> Also available in [bullet-point form](./bullet-points).
 
 ## Guiding Principles
 
