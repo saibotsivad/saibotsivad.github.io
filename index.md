@@ -52,8 +52,9 @@ In my spare time I like to write software, and I also occasionally
 write about some technical/user-experience issues.
 
 Currently I'm working for [eDataSource](http://www.edatasource.com/),
-but you can have a look at my professional experience
-[on LinkedIn](https://linkedin.com/in/saibotsivad).
+but you can have a look at my [resume](/resume), or my professional
+experience [on LinkedIn](https://linkedin.com/in/saibotsivad), if
+that's your thing.
 
 # For Computers
 
