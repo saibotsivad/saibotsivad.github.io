@@ -1,6 +1,6 @@
 ---
 title: Trying out Java 9 module loading
-summary: I attempt (and fail) to use Java 9's module loading system to handle different versions of the same module.
+description: I attempt (and fail) to use Java 9's module loading system to handle different versions of the same module.
 date: 2016-07-23 08:53
 layout: article
 published: true
