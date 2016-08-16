@@ -10,7 +10,7 @@ This site designed with ♥ by Tobias Davis: http://saibotsivad.com
 				<meta charset="utf-8">
 				<meta http-equiv="X-UA-Compatible" content="IE=edge">
 				<title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}</title>
-				<meta name="description" content="{% if page.description %}{{ page.description }} | {% endif %}{{ site.description }}">
+				<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 				<meta name="viewport" content="width=device-width, initial-scale=1">
 				<link rel="stylesheet" href="/style.css?v=1">
 				<link rel="shortcut icon" href="/logo.jpg">
