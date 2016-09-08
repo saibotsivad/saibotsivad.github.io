@@ -5,7 +5,7 @@ updated: 2016-08-30 23:49
 layout: article
 ---
 
-> Also available as a [downloadable file](./resume-tobias-davis-bullets.odt)
+> Also available as a [downloadable file](../resume-tobias-davis-bullets.odt)
 > or in [paragraph form](../).
 
 ## Philosophy
