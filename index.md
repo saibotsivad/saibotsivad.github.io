@@ -20,9 +20,6 @@ identities:
   - image: /media/linkedin.svg
     url: https://linkedin.com/in/saibotsivad
     name: linkedin
-  - image: /media/wordpress.svg
-    url: https://wordpress.org/support/profile/davistobias
-    name: wordpress
 ---
 
 
