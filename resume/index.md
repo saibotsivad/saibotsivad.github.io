@@ -18,7 +18,11 @@ layout: article
 
 ## Professional Experience
 
-### Developer for [eDataSource](http://www.edatasource.com/): May 2012-present
+### Developer for [From Now On](http://from-now-on.com/#home): September 2016-Present
+
+I just started!
+
+### Developer for [eDataSource](http://www.edatasource.com/): May 2012-September 2016
 
 The overview is that I help develop software for analysis
 of email data, using aggregated data gathered from a panel of over

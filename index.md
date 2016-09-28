@@ -20,6 +20,9 @@ identities:
   - image: /media/linkedin.svg
     url: https://linkedin.com/in/saibotsivad
     name: linkedin
+  - image: /media/wordpress.svg
+    url: https://wordpress.org/support/profile/davistobias
+    name: wordpress
 ---
 
 
@@ -51,7 +54,7 @@ done quickly.
 In my spare time I like to write software, and I also occasionally
 write about some technical/user-experience issues.
 
-Currently I'm working for [eDataSource](http://www.edatasource.com/),
+Currently I'm working for [From Now On](http://from-now-on.com/),
 but you can have a look at my [resume](/resume), or my professional
 experience [on LinkedIn](https://linkedin.com/in/saibotsivad), if
 that's your thing.

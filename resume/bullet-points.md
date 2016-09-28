@@ -16,7 +16,11 @@ layout: article
 
 ## Professional Experience
 
-### Software Engineer at [eDataSource](http://www.edatasource.com/) (New York, NY): May 2012-Current
+### Web Developer at [From Now On](http://from-now-on.com/#home) (Omaha, NE): September 2016-Current
+
+* I just started!
+
+### Software Engineer at [eDataSource](http://www.edatasource.com/) (New York, NY): May 2012-September 2016
 
 * Designed custom document parsing software to pull out and aggregate
 	data from third-party emails.
