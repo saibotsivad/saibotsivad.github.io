@@ -16,11 +16,13 @@ After having spent a few months slowly rebuilding the existing CMS, I have
 a design approach that seems to be working pretty well and is easy to modify
 and maintain, so I'm going to describe it here!
 
-## Intro: Bootstrap
+## Intro
 
 First of all, I'll introduce Svelte using a thing that I've been calling
-a "form element". It's really just a reusable single form element, like
+a "form field". It's really just a reusable single form element, like
 a text input, a checkbox, that sort of thing, created as a Svelte component.
+
+### Intro: Bootstrap
 
 We are using [Bootstrap](http://getbootstrap.com/), so an example text
 input field might be these HTML elements:
@@ -44,7 +46,7 @@ the `input` element:
 </div>
 ```
 
-## Intro: Svelte
+### Intro: Svelte
 
 I've found it helpful to compose Svelte components using these guides:
 
@@ -68,9 +70,9 @@ This means that the browser-based `change` event will cause the
 component to fire its own `change` event which is the now-updated
 `value` property.
 
-## Intro: Svelte+Bootstrap
+## Combine Svelte with Bootstrap
 
-With those pieces, I created a dozen or so core "form elements", which
+With those pieces, I created a dozen or so core "form field" components, which
 were built to be consistent with our UI guide. Since we are using Bootstrap
 I basically created a bunch of Svelte components that were all simple
 form-group Bootstrap elements.
@@ -78,7 +80,7 @@ form-group Bootstrap elements.
 Here's a complete example that I will explain:
 
 ```html
-<!-- FormElement.html -->
+<!-- FormFieldText.html -->
 <div class="form-group {{state ? `has-${state}` : ''}}">
 	{{#if label}}
 	<label
@@ -127,8 +129,8 @@ There's a lot going on here, so let me break it down:
 You might use this component like:
 
 ```html
-<!-- UsingFormElement.html -->
-<FormElement
+<!-- UsingFormFieldText.html -->
+<FormFieldText
 	label="First Name"
 	placeholder="Name"
 	helptext="Must be 2-20 characters."
@@ -137,3 +139,19 @@ You might use this component like:
 />
 ```
 
+## Form Components
+
+If form fields are single input elements, than what happens if
+we want to make a reusable set of those fields? I've been calling
+them "form components" so far, and I've found it helpful to follow
+these guides when making form components:
+
+* The main component never uses two-way binding, and the inner
+	components don't either
+* Main data still goes in to the component with `value="{{myThing}}"`
+* Data still comes out as emitted events using `on:eventName="handler(event)"`
+* Components should try to emit `change` events and take in
+	data as `value` but each component may be unique so you'll
+	want to document each one
+
+For example, if I find myself 
