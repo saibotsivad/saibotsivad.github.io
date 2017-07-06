@@ -51,10 +51,10 @@ done quickly.
 In my spare time I like to write software, and I also occasionally
 write about some technical/user-experience issues.
 
-Currently I'm working for [From Now On](http://from-now-on.com/),
-but you can have a look at my [resume](/resume), or my professional
-experience [on LinkedIn](https://linkedin.com/in/saibotsivad), if
-that's your thing.
+Currently I'm working for [From Now On](http://from-now-on.com/) on
+a product that connects fans to their school teams. You can have
+a look at my [resume](/resume), or my professional experience
+[on LinkedIn](https://linkedin.com/in/saibotsivad).
 
 # For Computers
 
@@ -71,7 +71,7 @@ that's your thing.
 	(See [Github](https://github.com/sdmp/sdmp.github.io))
 * You can take a [JSON schema](http://json-schema.org/) and turn it to
 	Markdown, for auto-generation of human-readable specs.
-	(See [Github](https://github.com/tobiaslabs/json-schema-to-markdown))
+	(See [Github](https://github.com/saibotsivad/json-schema-to-markdown))
 
 # For Humans
 
