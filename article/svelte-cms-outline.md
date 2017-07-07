@@ -49,27 +49,136 @@ the `input` element:
 
 ### Intro: Svelte
 
-I've found it helpful to compose Svelte components using these guides:
+The bits of Svelte that I consider the fundamentals are that you
+pass data in as a named attribute, and you pass data out as events:
 
-* Reusable components never use two-way binding
-* Data goes in to the component with `value="{{myThing}}"`
-* Data comes out as emitted events using `on:eventName="handler(event)"`
-* In particular, components should emit `change` events and
-	take in data as `value`
-
-Inside the base components I've found it works really well to use two-way
-binding like this:
-
-```
-<input
-	type="text"
-	bind:value="value"
-	on:change="fire('change', value)">
+```html
+<!-- SomeForm.html -->
+<MyComponent
+	myStuff="{{things}}"
+	on:namedEvent="myHandler(event)"
+/>
 ```
 
-This means that the browser-based `change` event will cause the
-component to fire its own `change` event which is the now-updated
-`value` property.
+Svelte does support two-way binding, and I will show you how I use
+it safely. For now though, two-way binding is not something that you
+will generall use. Instead, a component will take in a named property
+and emit named events.
+
+In the above example:
+
+* The property `things` will be available in the component `MyComponent` as
+	the variable name `myStuff`.
+* The component is emitting events that you would normally use in JavaScript,
+	so `component.on('namedEvent', myHandler)` becomes `on:namedEvent`. The
+	property named `event` is the reserved name for the emitted event.
+
+### Intro: Composing Components
+
+Since I'm building a CMS, mostly I am dealing with a lot of views that have
+forms, with lots of inputs. And in anything like that, you'll definitely end
+up with repeatable chunks, that you don't want to rewrite for every view.
+
+What I've ended up doing is distinguishing between components that are the
+lowest level and emit single events (like a text input element with minimal
+classes/styling), versus components that contain one or many of those low
+level components.
+
+Currently I've named them "form *field*" (for a single field) and "form *element*"
+for a composed set of fields. That naming doesn't sound great, so I'll probably
+change it eventually when I think of something better.
+
+The biggest issue here is that you want all your different components to
+be taking in consistently named values, and emitting consistently named
+events. In HTML `<input>` elements, it seems that the norm is the value
+input is named `value`, and the native emitted change event is usually
+named `onchange` or `on:change` in Svelte. Let's keep that, and stick
+with these guidelines:
+
+* Reusable components shouldn't generally use two-way binding.
+* Data should normally go in with `value="{{property}}"`.
+* Data should normally emit under the name `change`, e.g. `on:change="handler(event)"`.
+
+Specifically, the low-level components should really attempt to adhere
+to those guidelines.
+
+### Intro: Data/Message Structure
+
+What I really wanted to end up with was some component that could
+look like this:
+
+```html
+<!-- MyForm.html -->
+<ComponentOne
+	value="form.propertyOne"
+	on:change="...do something one..."
+/>
+<ComponentTwo
+	value="form.propertyTwo"
+	on:change="...do something two..."
+/>
+```
+
+And so I wanted all the components to emit change events that were
+consistently shaped.
+
+What I ended up doing is following these rules:
+
+**Low-level form components emit raw values.**
+
+For example, a form component that is a wrapper for an `<input type="text">`
+would emit a change event where `typeof event === 'string'` and so on.
+
+**Higher-level form components emit "change" objects.**
+
+These change objects look like this:
+
+```json
+{
+	"namedProperty": "emitted value"
+}
+```
+
+So for example, a higher-level component that handles a first and last
+name might emit a change event that looks like this:
+
+```json
+{
+	"firstName": "Billy"
+}
+```
+
+Because the thing emitted is an object, it can emit a change object
+containing multiple properties, at any depth. For example, an address
+book component might emit a change event that looks like this:
+
+```json
+{
+	"person": {
+		"firstName": "Billy",
+		"lastName": "Badger"
+	},
+	"age": 72
+}
+```
+
+Because of this consistent behaviour, a view that is a complex form
+really is just a component that emits bigger change objects, and you
+can make some utilities to accumulate and save overall emitted changes.
+
+(I wrote a [difference accumulator](https://github.com/saibotsivad/difference-accumulator)
+that we use at work.)
+
+If it isn't clear why this design decision is powerful, it should
+become clearer in some of the later sections.
+
+
+
+
+
+
+
+
 
 ## Combine Svelte with Bootstrap
 
