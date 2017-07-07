@@ -18,9 +18,10 @@ and maintain, so I'm going to describe it here!
 
 ## Intro
 
-First of all, I'll introduce Svelte using a thing that I've been calling
-a "form field". It's really just a reusable single form element, like
-a text input, a checkbox, that sort of thing, created as a Svelte component.
+I'll introduce some of the tools and concepts used. We use Bootstrap for
+fast styling, Svelte for the templates/HTML, and some data structures to
+make message passing and object saving consistent and easier to pull into
+the brain.
 
 ### Intro: Bootstrap
 
