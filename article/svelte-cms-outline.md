@@ -6,6 +6,8 @@ layout: article
 published: true
 ---
 
+{% raw %}
+
 In my current work with [From Now On](http://from-now-on.com/) I inherited
 a CMS website that was built with old technology, created in a rush, and had a lot of
 [fundamental](https://medium.com/javascript-scene/how-to-fix-the-es6-class-keyword-2d42bb3f4caf)
@@ -510,3 +512,5 @@ issue about it and that might be easier to track than this website.
 
 This article and all code herein, I release under the
 [Very Open License](http://veryopenlicense.com).
+
+{% endraw %}
