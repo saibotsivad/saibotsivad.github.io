@@ -500,9 +500,11 @@ concepts are worth integrating into your own app.
 
 That's all for now!
 
-If you've got questions about any of this, or want to pick my
+As people ask questions or I think of more things that don't quite fit inside
+this article, I'll add them to [this open issue](https://github.com/saibotsivad/saibotsivad.github.io/issues/10),
+but if you've got questions about any of this, or want to pick my
 brain about ideas, don't hesitate to ask by
-[opening a Github issue](https://github.com/saibotsivad/saibotsivad.github.io/issues).
+[opening new a Github issue](https://github.com/saibotsivad/saibotsivad.github.io/issues).
 
 Eventually I'd like to put together a demo of all this, and if
 I do I'll update this document. You could open a Github
