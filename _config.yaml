@@ -10,5 +10,3 @@ name: "saibotsivad"
 description: "Trying to be excellent in software and user interfaces."
 url: "http://saibotsivad.com"
 permalink: pretty
-gems:
-  - jekyll-feed

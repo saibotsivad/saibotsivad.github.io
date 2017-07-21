@@ -6,6 +6,7 @@ it uses Github Pages, aka [JekyllRB](http://jekyllrb.com/).
 For development, build and launch using the command (need ruby
 installed, presumably):
 
+	gem install jekyll bundler
 	bundle exec jekyll serve
 
 Since it's run with Github Pages, it means that any repo
