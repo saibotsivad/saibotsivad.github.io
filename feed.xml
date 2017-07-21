@@ -33,7 +33,7 @@ layout: nil
         {% endif %}
       </author>
       <content type="html">
-        <![CDATA[{{ post.content }}]]>
+        <![CDATA[{{ post.content | markdownify }}]]>
       </content>
     </entry>
   {% endfor %}
