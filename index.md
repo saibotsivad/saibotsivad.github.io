@@ -58,6 +58,8 @@ a look at my [resume](/resume), or my professional experience
 
 # For Computers
 
+* A collection of [email tools](https://github.com/saibotsivad/imap-tools) that I
+	wrote to make it easier to work with IMAP.
 * [hex2words](https://tobiaslabs.github.io/hex2words/) is a simple JS tool utilizing the
 	[PGP word list](https://en.wikipedia.org/wiki/PGP_word_list) to verify hashes.
 	(See [Github](https://github.com/tobiaslabs/hex2words))
