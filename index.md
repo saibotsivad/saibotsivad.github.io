@@ -32,21 +32,17 @@ identities:
 		</li>
 		{% endfor %}
 	</ul>
-	<p>I write software and design user interfaces, and I want to be excellent at both of those things!</p>
-	<p>You can have a look at <a href="/resume">my resume</a>, if that's your thing.</p>
 	<hr>
 </header>
 
 # About Me
 
-I care about solving problems using software. I want the
-code that I write to be readable and maintainable years
-down the road. I like to spend the extra time doing it
-right, but I can understand the necessity of getting it
-done quickly.
-
-In my spare time I like to write software, and I also occasionally
-write about some technical/user-experience issues.
+* Solving problems using software.
+* Engineering products that are maintainable yet flexible.
+* Helping you deliver exceptional service and experiences to your clients.
+* Working with teams to plan and execute solutions to complex problems.
+* Design and implementation of branded websites and web applications.
+* Know when to spend the extra time to get it right, and when to cut corners to get it done quickly.
 
 Currently I'm working for [From Now On](http://from-now-on.com/) on
 a product that connects fans to their school teams. You can have
