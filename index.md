@@ -27,7 +27,7 @@ identities:
 		{% for identity in page.identities %}
 		<li class="{{ identity.name }}">
 			<a href="{{ identity.url }}">
-				<img src="{{ identity.image }}" alt="">
+				<img src="{{ identity.image }}" alt="{{ identity.name }} icon">
 			</a>
 		</li>
 		{% endfor %}
