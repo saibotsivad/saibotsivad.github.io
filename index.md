@@ -37,17 +37,17 @@ identities:
 
 # About Me
 
+Currently I'm working with [From Now On](http://from-now-on.com/) on
+a product that connects fans to their school teams, but I'm available
+for freelance work. You can have a look at my [resume](/resume), or
+my professional experience [on LinkedIn](https://linkedin.com/in/saibotsivad).
+
 * Solving problems using software.
 * Engineering products that are maintainable yet flexible.
 * Helping you deliver exceptional service and experiences to your clients.
 * Working with teams to plan and execute solutions to complex problems.
 * Design and implementation of branded websites and web applications.
 * Know when to spend the extra time to get it right, and when to cut corners to get it done quickly.
-
-Currently I'm working for [From Now On](http://from-now-on.com/) on
-a product that connects fans to their school teams. You can have
-a look at my [resume](/resume), or my professional experience
-[on LinkedIn](https://linkedin.com/in/saibotsivad).
 
 # For Computers
 
