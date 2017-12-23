@@ -14,3 +14,12 @@ inside the [saibotsivad repo](https://github.com/saibotsivad)
 that has a `gh-pages` branch will be accessible at
 
 	saibotsivad.com/$REPO_NAME
+
+Note to self: If you're getting the error `bundle: command not found`,
+it's probably because your `PATH` doesn't include the gem binary path. Try:
+
+	gem env
+
+Then look for **GEM PATHS** and `ls` the `bin` folder of each of those
+until you find the `jekyll` and `bundle` binaries. After that, add
+the `bin` folders to your `PATH`.
