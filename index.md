@@ -2,27 +2,30 @@
 layout: index
 isroot: true
 identities:
-  - image: /media/github.png
-    url: https://github.com/saibotsivad
-    name: github
+  - image: /media/linkedin.svg
+    url: https://linkedin.com/in/saibotsivad
+    name: linkedin
   - image: /media/keybase.png
     url: https://keybase.io/saibotsivad
     name: keybase
   - image: /media/twitter.svg
     url: https://twitter.com/saibotsivad
     name: twitter
+  - image: /media/github.png
+    url: https://github.com/saibotsivad
+    name: github
   - image: /media/npmjs.svg
     url: https://www.npmjs.com/~saibotsivad
     name: npmjs
-  - image: /media/linkedin.svg
-    url: https://linkedin.com/in/saibotsivad
-    name: linkedin
 ---
 
 
 <header class="index">
 	<img src="/logo.jpg" alt="Logo of Tobias!">
-	<h1>saibotsivad:</h1>
+	<h1>Hello!</h1>
+	<p>My name is Tobias Davis.</p>
+	<p>I build software that solves problems, and I would love to work with you on your next project!</p>
+	<hr>
 	<ul class="online-presence-icons">
 		{% for identity in page.identities %}
 		<li class="{{ identity.name }}">
@@ -37,38 +40,48 @@ identities:
 
 # About Me
 
-Currently I'm working with [From Now On](http://from-now-on.com/) on
-a product that connects fans to their school teams, but I'm available
-for freelance work. You can have a look at my [resume](/resume), or
-my professional experience [on LinkedIn](https://linkedin.com/in/saibotsivad).
+I build web-based applications for businesses, either to use internally or for their clients.
 
-* Solving problems using software.
-* Engineering products that are maintainable yet flexible.
-* Helping you deliver exceptional service and experiences to your clients.
-* Working with teams to plan and execute solutions to complex problems.
-* Design and implementation of branded websites and web applications.
-* Know when to spend the extra time to get it right, and when to cut corners to get it done quickly.
+Here is what I do:
+
+* Solve problems using software.
+* Help you deliver exceptional services to your clients.
+* Work with teams to plan and execute solutions.
+* Engineer products that are maintainable and flexible.
+
+Some things I've built:
+
+* Digital content management systems
+* Analytical tools for inspecting data
+* Custom report generators
+* Software for architectural system monitoring
+
+Have a look at my [resume](/resume), or look me up [on LinkedIn](https://linkedin.com/in/saibotsivad).
 
 # For Computers
 
+Here are some things I've made that I think are useful:
+
 * A collection of [email tools](https://github.com/saibotsivad/imap-tools) that I
 	wrote to make it easier to work with IMAP.
+* You can take a [JSON schema](http://json-schema.org/) and turn it to
+	Markdown, for auto-generation of human-readable specs.
+	(See [Github](https://github.com/saibotsivad/json-schema-to-markdown))
 * [hex2words](https://tobiaslabs.github.io/hex2words/) is a simple JS tool utilizing the
 	[PGP word list](https://en.wikipedia.org/wiki/PGP_word_list) to verify hashes.
 	(See [Github](https://github.com/tobiaslabs/hex2words))
+* The [SDMP](https://sdmp.github.io/) is my attempt at making the internet a better,
+	more secure place.
+	(See [Github](https://github.com/sdmp/sdmp.github.io))
 * The [Very Open License](http://veryopenlicense.com/) is for people and businesses
 	who are uncomfortable with "The Swears" in the [WTFPL](http://www.wtfpl.net/),
 	but want something even simpler and *less* restrictive than the
 	[MIT license](http://opensource.org/licenses/MIT).
 	(See [Github](https://github.com/saibotsivad/veryopenlicense))
-* The [SDMP](https://sdmp.github.io/) is my attempt at making the internet a better,
-	more secure place.
-	(See [Github](https://github.com/sdmp/sdmp.github.io))
-* You can take a [JSON schema](http://json-schema.org/) and turn it to
-	Markdown, for auto-generation of human-readable specs.
-	(See [Github](https://github.com/saibotsivad/json-schema-to-markdown))
 
 # For Humans
+
+Occassionally I write things that are meant for humans to read, instead of computers:
 
 <ul>
 {% assign sorted_pages = (site.pages | sort: 'date' | reverse ) %}
