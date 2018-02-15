@@ -8,9 +8,6 @@ identities:
   - image: /media/keybase.png
     url: https://keybase.io/saibotsivad
     name: keybase
-  - image: /media/twitter.svg
-    url: https://twitter.com/saibotsivad
-    name: twitter
   - image: /media/npmjs.svg
     url: https://www.npmjs.com/~saibotsivad
     name: npmjs
