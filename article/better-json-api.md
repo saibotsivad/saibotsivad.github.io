@@ -47,10 +47,14 @@ These follow the JSON-API spec as normal:
 
 > Note: Although deleting multiple resources in one request is not supported, we have
 > not found this to be an issue, because we don't support completely destroying a
-> resource. Instead, a resource is tagged with something like `objectState = 'DELETED'`
+> resource.
+>
+> Instead, a resource is tagged with something like `objectState = 'DELETED'`
 > and in our database queries we exclude resources with that type. In this way, to
 > the user the resource is deleted, but is persisted in the database until periodic
-> cleanup. This makes debugging much easier, and also means you can delete multiple
+> cleanup.
+>
+> This makes debugging much easier, and also means you can delete multiple
 > resources by issuing a `PATCH`. (Discussed below.)
 
 These routes stray from the JSON-API spec in one small but powerful way: they all take
