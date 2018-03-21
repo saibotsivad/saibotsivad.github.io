@@ -26,7 +26,7 @@ In normal REST parlance, a call to something like `/things` is a call to the thi
 collection. Collection names are always plural, e.g. `/things` and never `/thing`.
 
 Strictly speaking, the JSON-API spec (and numerous other people all over the internet)
-do not support a REST route that creates or modifies multiple resource in one HTTP
+do not support a REST route that creates or modifies multiple resources in one HTTP
 request. I have found that in practice this is not a sustainable approach. You can't
 expose a money-making API that doesn't allow some sort of batching.
 
@@ -85,9 +85,9 @@ These follow the JSON-API spec as normal:
 * `GET /things/:thingId` Fetch a single `thing` object, potentially including
 	other related resources.
 * `POST /things/:thingId` This route is not supported.
-* `PUT /things/:thingId` Takes an already existing `thign` and replaces that
+* `PUT /things/:thingId` Takes an already existing `thing` and replaces that
 	resource, returning the modified `thing` object.
-* `PATCH /things/:thingId` Takes an already existing `thign` and applies a change
+* `PATCH /things/:thingId` Takes an already existing `thing` and applies a change
 	to that resource, returning the modified `thing` object.
 * `DELETE /things/:thingId` Destroy an existing `thing` from the database.
 
