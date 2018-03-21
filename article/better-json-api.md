@@ -7,8 +7,8 @@ published: true
 ---
 
 I've worked on and designed many APIs over the years, mostly for small start-up type
-of companies, and many projects seem like they start their API design with an "we try
-to be consistent but anything goes" sort of approach.
+of companies, and many projects seem like they start their API design with an "anything
+goes" sort of approach.
 
 As a project matures, inevitably the developers want to be more consistent in their
 API design. Smart engineers will look for pre-existing design work, so they don't
