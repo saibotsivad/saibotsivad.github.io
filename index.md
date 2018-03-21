@@ -2,21 +2,18 @@
 layout: index
 isroot: true
 identities:
-  - image: /media/linkedin.svg
-    url: https://linkedin.com/in/saibotsivad
-    name: linkedin
-  - image: /media/keybase.png
-    url: https://keybase.io/saibotsivad
-    name: keybase
-  - image: /media/twitter.svg
-    url: https://twitter.com/saibotsivad
-    name: twitter
   - image: /media/github.png
     url: https://github.com/saibotsivad
     name: github
+  - image: /media/keybase.png
+    url: https://keybase.io/saibotsivad
+    name: keybase
   - image: /media/npmjs.svg
     url: https://www.npmjs.com/~saibotsivad
     name: npmjs
+  - image: /media/linkedin.svg
+    url: https://linkedin.com/in/saibotsivad
+    name: linkedin
 ---
 
 
