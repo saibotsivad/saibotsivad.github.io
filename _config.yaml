@@ -7,6 +7,6 @@ kramdown:
 exclude: [ "Gemfile", "Gemfile.lock", "readme.md" ]
 include: [ ".well-known" ]
 name: "saibotsivad"
-description: "Trying to be excellent in software and user interfaces."
+description: "I build software for businesses, and I would love to work with you on your next project!"
 url: "http://saibotsivad.com"
 permalink: pretty

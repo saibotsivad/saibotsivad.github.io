@@ -24,7 +24,7 @@ identities:
 	<img src="/logo.jpg" alt="Logo of Tobias!">
 	<h1>Hello!</h1>
 	<p>My name is Tobias Davis.</p>
-	<p>I build software that solves problems, and I would love to work with you on your next project!</p>
+	<p>I build software for businesses, and I would love to work with you on your next project!</p>
 	<hr>
 	<ul class="online-presence-icons">
 		{% for identity in page.identities %}
@@ -49,7 +49,7 @@ Here is what I do:
 * Work with teams to plan and execute solutions.
 * Engineer products that are maintainable and flexible.
 
-Some things I've built:
+Some things I've built for other clients:
 
 * Digital content management systems
 * Analytical tools for inspecting data
