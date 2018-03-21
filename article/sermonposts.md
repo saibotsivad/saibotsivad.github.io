@@ -2,7 +2,7 @@
 title: Sermon Posts Wordpress plugin
 date: 2011-04-06 03:47
 layout: article
-published: true
+published: false
 ---
 
 > This project has been discontinued since ~2012, due to lack of resources. I have

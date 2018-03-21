@@ -2,7 +2,7 @@
 title: More printing and calibration
 date: 2013-01-23 09:56
 layout: article
-published: true
+published: false
 ---
 
 One thing I am certain of is that the Solidoodle is a home-brew 3D

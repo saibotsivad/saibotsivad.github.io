@@ -2,7 +2,7 @@
 title: The hydrostat Baja runs
 date: 2010-04-22 23:56
 layout: article
-published: true
+published: false
 ---
 
 I've been helping the Mini Baja team at school with a research project: We want to see if we can get the Baja to run using hydrostat motors instead of a geared transmission. That would save us the problem of stripped gears and broken CV shafts. Two other students (Mary and Ryan) and myself worked on this for quite a while, and we finally got it put together correctly, and took it outside to run it around.

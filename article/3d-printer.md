@@ -2,7 +2,7 @@
 title: 3D Printer
 date: 2013-01-15 14:10
 layout: article
-published: true
+published: false
 ---
 
 Saturday, a few days ago, I finally received the long-awaited [Solidoodle](http://solidoodle.com/) 3D

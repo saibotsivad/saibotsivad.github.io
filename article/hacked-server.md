@@ -2,7 +2,7 @@
 title: Hacked Server
 date: 2012-08-23 08:23
 layout: article
-published: true
+published: false
 ---
 
 Over the weekend I was informed by a friend that a site I maintain (not mine
