@@ -26,7 +26,7 @@ In normal REST parlance, a call to something like `/things` is a call to the thi
 collection. Collection names are always plural, e.g. `/things` and never `/thing`.
 
 Strictly speaking, the JSON-API spec (and numerous other people all over the internet)
-do not support a REST route that creates or modifies multiple resource in one HTTP
+do not support a REST route that creates or modifies multiple resources in one HTTP
 request. I have found that in practice this is not a sustainable approach. You can't
 expose a money-making API that doesn't allow some sort of batching.
 
@@ -57,18 +57,26 @@ These follow the JSON-API spec as normal:
 > This makes debugging much easier, and also means you can delete multiple
 > resources by issuing a `PATCH`. (Discussed below.)
 
-These routes stray from the JSON-API spec in one small but powerful way: they all take
-a single `thing` object _or_ an array of `thing` objects on the `data` property:
+These routes stray from the JSON-API spec in one small but powerful way: instead of taking
+a single `thing` object on the data property, they all take an `array` of `thing` objects:
 
-* `POST /things` Creates the resource(s), returning the list of created resource(s).
-* `PUT /things`	Replaces the resource(s), returning the list of modified resource(s).
-* `PATCH /things` Applies a change to the resource(s), returning the list of modified resource(s).
+* `POST /things` Creates the resources, returning the list of created resources.
+* `PUT /things`	Replaces the resources, returning the list of modified resources.
+* `PATCH /things` Applies a change to the resources, returning the list of modified resources.
 
-Since the `data` object of the `/things` POST, PUT, and PATCH must be a
-[resource object](http://jsonapi.org/format/#document-resource-objects),
-it is safe to overload the `data` property: if the type of `data` is an object, it
-is either an invalid object or a _single_ `thing` object, and if `data` is an array
-it is either an invalid request or a _list_ of `thing` objects.
+Requiring the `POST /things` to take an array on the `data` property means that, to
+create a single object, you would include an array of one item.
+
+> Note: In a previous version of this article I wrote that we overloaded the `data`
+> property to accept both objects _and_ arrays. It was believed that this would
+> be safe, due to the nature of the specs.
+>
+> Although it still could be considered "safe" to overload the `data` property, it
+> makes a lot of things simpler (in server side code and in API documentation) to
+> just say "it has to be an array".
+>
+> In practice we code our web apps to send arrays of single objects anyway, so
+> adding this restriction doesn't actually change anything for us.
 
 ### Individual Items
 
@@ -77,9 +85,9 @@ These follow the JSON-API spec as normal:
 * `GET /things/:thingId` Fetch a single `thing` object, potentially including
 	other related resources.
 * `POST /things/:thingId` This route is not supported.
-* `PUT /things/:thingId` Takes an already existing `thign` and replaces that
+* `PUT /things/:thingId` Takes an already existing `thing` and replaces that
 	resource, returning the modified `thing` object.
-* `PATCH /things/:thingId` Takes an already existing `thign` and applies a change
+* `PATCH /things/:thingId` Takes an already existing `thing` and applies a change
 	to that resource, returning the modified `thing` object.
 * `DELETE /things/:thingId` Destroy an existing `thing` from the database.
 
@@ -122,7 +130,32 @@ Or inside the `data` object, like this:
 
 However, for consistency we have found that normalizing requests/responses
 to the second one makes more sense, so that we can more carefully overload
-the `data` property for multiple resources.
+the `data` property for multiple resources:
+
+
+```json
+{
+    "data": [{
+        "id": "thing-01",
+        "type": "thing",
+        "attributes": {
+            "name": "John Jacob Jingleheimerschmidt"
+        },
+        "meta": {
+            "created": "2017-08-23T17:45:13Z"
+        }
+    },{
+        "id": "thing-02",
+        "type": "thing",
+        "attributes": {
+            "name": "Same Name"
+        },
+        "meta": {
+            "created": "2017-09-15T03:17:21Z"
+        }
+    }]
+}
+```
 
 Apart from that, strictly speaking if you make a request or receive a response
 containing multiple resources and there are `meta`/etc. fields at the root
@@ -181,48 +214,9 @@ And the response object might look something like this:
 }
 ```
 
-### `POST /coaches` create a single resource
+### `POST /coaches` create resources
 
-To create a single `coach` object associated with a team, you might do:
-
-```
-POST /api/secure/coaches
-{
-	"data": {
-		"type": "coach",
-		"attributes": {
-			"teamId": "91cfa28f-6551-f009-2f6a-59a55679c940",
-			"firstName": "Froggy",
-			"lastName": "Fresh"
-		}
-	}
-}
-```
-
-The response would look pretty much the same as the request, but would
-include an `id` on the created resource, and may include other information
-such as a created date:
-
-```
-{
-	"data": {
-		"id": "f95d88cf-17d6-44fc-be6a-4f215b117573",
-		"type": "coach",
-		"attributes": {
-			"teamId": "91cfa28f-6551-f009-2f6a-59a55679c940",
-			"firstName": "Froggy",
-			"lastName": "Fresh"
-		},
-		"meta": {
-			"created": "2017-08-23T17:45:13Z"
-		}
-	}
-}
-```
-
-### `POST /coaches` create multiple resources
-
-To create multiple `coach` objects, you might do:
+To create one or more `coach` objects you would do something like:
 
 ```
 POST /api/secure/coaches
@@ -245,9 +239,9 @@ POST /api/secure/coaches
 }
 ```
 
-Again, the response would look pretty much the same as the request,
-except with an `id` added to each resource, and potentially other
-information included:
+The response would look pretty much the same as the request, but would
+include an `id` on the created resource, and may include other information
+such as a created date:
 
 ```
 {
@@ -277,61 +271,16 @@ information included:
 }
 ```
 
-### `PUT /coaches` replace a single resource
+### `PUT /coaches` replace resources
 
-Updating with a PUT _replaces_ the existing resource. In practice, to avoid
-collisions, I have personally found it necessary to include some sort of field for
+Updating with a PUT _replaces_ the existing resource. In my experience creating APIs, to avoid
+collisions I have normally found it necessary to include some sort of field for
 [optimistic concurrency](https://en.wikipedia.org/wiki/Optimistic_concurrency_control).
 
 If your data structure uses a "last updated" property, that usually
 works well. That property goes in the `meta` property.
 
-So to replace a single `coach` object, you might do:
-
-```
-PUT /api/secure/coaches
-{
-	"data": {
-		"id": "f95d88cf-17d6-44fc-be6a-4f215b117573",
-		"type": "coach",
-		"attributes": {
-			"teamId": "91cfa28f-6551-f009-2f6a-59a55679c940",
-			"firstName": "Froggy",
-			"lastName": "Fresh",
-			"score": 9001
-		},
-		"meta": {
-			"updated": "2017-08-23T17:45:13Z"
-		}
-	}
-}
-```
-
-And the response would look pretty much the same as the request, but
-with additional/updated information in the `meta` object:
-
-```
-{
-	"data": {
-		"id": "f95d88cf-17d6-44fc-be6a-4f215b117573",
-		"type": "coach",
-		"attributes": {
-			"teamId": "91cfa28f-6551-f009-2f6a-59a55679c940",
-			"firstName": "Froggy",
-			"lastName": "Fresh",
-			"score": 9001
-		},
-		"meta": {
-			"created": "2017-08-23T17:45:13Z",
-			"updated": "2017-11-07T23:07:52Z"
-		}
-	}
-}
-```
-
-### `PUT /coaches` replace multiple resources
-
-To _replace_ multiple `coach` objects, you do the same:
+So to replace some `coach` objects, you might do:
 
 ```
 PUT /api/secure/coaches
@@ -364,7 +313,7 @@ PUT /api/secure/coaches
 }
 ```
 
-Again, the response would look pretty much the same as the request, except you
+The response would look pretty much the same as the request, except you
 might update the `meta` properties, if that's in your data structure:
 
 ```
@@ -397,7 +346,7 @@ might update the `meta` properties, if that's in your data structure:
 }
 ```
 
-### `PATCH /coaches` diff a single resource
+### `PATCH /coaches` diff resources
 
 Updating with a PATCH changes specific properties of an existing resource, according
 to some pretty straightforward rules:
@@ -408,50 +357,8 @@ to some pretty straightforward rules:
 
 (Again, placing the optimistic concurrency control property in the `meta` object.)
 
-So if you wanted to update the `score` on a single `coach` object, the
+So if you wanted to update the `score` on some `coach` objects, the
 request would look something like this:
-
-```
-PATCH /api/secure/coaches
-{
-	"data": {
-		"id": "f95d88cf-17d6-44fc-be6a-4f215b117573",
-		"type": "coach",
-		"attributes": {
-			"score": 73
-		},
-		"meta": {
-			"updated": "2017-08-23T17:45:13Z"
-		}
-	}
-}
-```
-
-The response would include the _full_ resource object, after that diff
-has been applied:
-
-```
-{
-	"data": {
-		"id": "f95d88cf-17d6-44fc-be6a-4f215b117573",
-		"type": "coach",
-		"attributes": {
-			"teamId": "91cfa28f-6551-f009-2f6a-59a55679c940",
-			"firstName": "Froggy",
-			"lastName": "Fresh",
-			"score": 73
-		},
-		"meta": {
-			"created": "2017-08-23T17:45:13Z",
-			"updated": "2017-11-07T23:07:52Z"
-		}
-	}
-}
-```
-
-### `PATCH /coaches` diff multiple resources
-
-To PATCH multiple `coach` objects, you might do:
 
 ```
 PUT /api/secure/coaches
@@ -478,8 +385,8 @@ PUT /api/secure/coaches
 }
 ```
 
-The response here would be an array of resource objects, much like the response
-to a PUT request:
+The response would include the _full_ resource objects, after the diffs
+have been applied:
 
 ```
 {
@@ -543,12 +450,12 @@ And the response object might look something like this:
 ### `PUT /coaches/:coachId` replace single resource
 
 This route is identical to the `PUT /coaches` route, except that
-it can only ever take a single object on the `data` property.
+it can only ever return a _single_ object on the `data` property.
 
 ### `PATCH /coaches/:coachId` diff single resource
 
 This route is identical to the `PATCH /coaches` route, except that
-it can only ever take a single object on the `data` property.
+it can only ever return a _single_ object on the `data` property.
 
 ### `DELETE /coaches/:coachId` destroy single resource
 
