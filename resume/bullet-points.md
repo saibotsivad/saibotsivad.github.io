@@ -5,7 +5,9 @@ updated: 2016-08-30 23:49
 layout: article
 ---
 
-> Also available as a [downloadable file](../resume-tobias-davis-bullets.odt)
+> Also available as a downloadable file
+> ([ODT](../resume-tobias-davis-bullets.odt)
+> or [PDF](../resume-tobias-davis-bullets.pdf))
 > or in [paragraph form](../).
 
 ## Philosophy
@@ -16,9 +18,24 @@ layout: article
 
 ## Professional Experience
 
-### Web Developer at [From Now On](http://from-now-on.com/#home) (Omaha, NE): September 2016-Current
+### Web Developer at [From Now On](http://from-now-on.com/) (Omaha, NE): September 2016-Present
 
-* I just started!
+* Designing and maintaining client-facing webapp interfaces for
+	a content-management system.
+* Architecture-level design, and continued maintenance of various
+	servers and services.
+* Inherited a large and mostly untested code base, introducing
+	automated testing on pull requests, linting code as part of
+	the test suite, and code styles which lowered regression
+	issues and bug counts.
+* Building and maintaining API services that interface with
+	third-party services, cleaning and normalizing inconsistent data.
+* As a full-stack engineer in a small startup company, I do
+	sys-ops level work, creating and maintaining systems in the
+	Azure and AWS environments.
+* Currently the lead webapp engineer and lead JavaScript engineer.
+* Currently balancing my workload between building new features
+	and migrating old, buggy code in a safe and tested manner.
 
 ### Software Engineer at [eDataSource](http://www.edatasource.com/) (New York, NY): May 2012-September 2016
 
