@@ -1,0 +1,60 @@
+:root {
+	--primary: #2F65B8;
+	--accent: #F3DC32;
+	--black: #181A1C;
+	--darkgray: #7E8696;
+	--lightgray: #D5DAE8;
+	--white: #FCFCFF;
+}
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 1.2em;
+	color: var(--black);
+	background-color: var(--white);
+}
+
+body {
+	padding: 1rem;
+	max-width: 38rem;
+	margin: 0 auto;
+}
+header > img {
+	max-width: 150px;
+}
+
+body > footer {
+	text-align: center;
+	color: var(--darkgray);
+	border-top: 1px solid var(--darkgray);
+	padding-top: 2rem;
+	margin-top: 2rem;
+}
+nav > ul.external-link-icons img {
+	width: 4rem;
+}
+body > footer nav ul {
+	list-style: none;
+	padding: 1rem 0 2rem 0;
+	margin: 0;
+}
+body > footer nav li {
+	display: inline-block;
+	padding: 0.8rem;
+}
+body > footer nav li a {
+	white-space: nowrap;
+}
+body > footer a {
+	padding: 0.8rem;
+	border-radius: 0.3rem;
+	display: inline-block;
+}
+body > footer a:visited {
+	color: var(--black);
+}
+body > footer a:hover {
+	background-color: var(--lightgray);
+}
